@@ -17,13 +17,13 @@ minindex = 1
 maxindex = coin_num
 
 for i in range(100):
-	minindex = 1
+	minindex = 0
 	maxindex = coin_num
 
 	for j in range(try_num+5):
 		#isDouble = (maxindex - minindex + 1) % 2 == 0
 		
-		middle = int(math.ceil(float(maxindex + minindex) / 2))
+		middle = (maxindex + minindex) / 2 + (maxindex + minindex) % 2
 		#print '##### [middle]:' + str(middle) + '[middle * 2]:' + str(middle * 2)
 		#print '<<<<< [min]:' + str(minindex) + ' [max]:' + str(maxindex) + ' [middle]:' + str(middle)
 		
