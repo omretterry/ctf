@@ -2,4 +2,6 @@
 Some files about ctf
 
 # wargame sites
-(wechall)[http://www.wechall.net]
+[wechall](http://www.wechall.net)
+* encoding              441 / 3 / 7
+* programming 1         the http proxy
