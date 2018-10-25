@@ -1,5 +1,6 @@
 # ctf
-Some files about ctf
+
+<img src="https://www.hackthebox.eu/badge/image/70294" alt="Hack The Box">
 
 # wargame sites
 [wechall](http://www.wechall.net)
@@ -9,3 +10,4 @@ Some files about ctf
 [pwnable](http://www.pwnable.kr)
 
 [cgctf](https://cgctf.nuptsast.com/challenges)
+[hackthebox](https://www.hackthebox.eu)
