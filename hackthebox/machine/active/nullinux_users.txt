@@ -1,0 +1,5 @@
+Administrator
+Guest
+krbtgt
+SVC_TGS
+DC$
