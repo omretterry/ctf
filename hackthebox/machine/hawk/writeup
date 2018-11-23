@@ -1,0 +1,2 @@
+bruteforce-salted-openssl -d sha256 -f /usr/share/wordlists/rockyou.txt drupal.txt
+openssl enc -d -aes256 -salt -in drupal.txt -out drupal.dec -k friends
