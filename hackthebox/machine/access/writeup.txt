@@ -1,0 +1,23 @@
+1. get engineer pass in backup.mdb
+
+2. get mail 
+-----------------------
+Hi there,
+
+
+
+The password for the “security” account has been changed to 4Cc3ssC0ntr0ller.
++Please ensure this is passed on to your engineers.
+
+
+
+Regards,
+
+John
+-----------------------
+
+3. telnet by security 4Cc3ssC0ntr0ller
+4. get user
+
+5. cmdkey /list  find have stored the admin credi
+
