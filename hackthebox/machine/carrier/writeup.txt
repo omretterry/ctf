@@ -1,0 +1,9 @@
+1. nmap port
+
+PORT   STATE    SERVICE  VERSION
+21/tcp filtered ftp
+22/tcp open     ssh      OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+80/tcp open     ssl/http Apache/2.4.18 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+
