@@ -14,3 +14,19 @@
 
 
 [hackthebox](https://www.hackthebox.eu)
+
+## Hackthebox Finished Machine
+| machine | operation | user | root | active |
+|---------|-----------|------|------|--------|
+| ypuffy  | other     | √    | √    | √      |
+| access  | windows   | √    | √    | √      |
+| curling | linux     | √    | √    | √      |
+| irked   | linux     | √    | √    | √      |
+| jerry   | windows   | √    | √    | ×      |
+| active  | windows   | √    | √    | ×      |
+| waldo   | linux     | √    | √    | ×      |
+
+### Target
+| machine | operation | user | root | active |
+|---------|-----------|------|------|--------|
+| carrier | linux     | √    |      | √      |
