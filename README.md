@@ -29,4 +29,5 @@
 ### Target
 | machine | operation | user | root | active |
 |---------|-----------|------|------|--------|
+| zipper  | linux     |      |      | √      |
 | carrier | linux     | √    |      | √      |
