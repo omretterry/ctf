@@ -1,0 +1,18 @@
+1.nmap
+Host is up (0.34s latency).
+Not shown: 65532 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+10050/tcp open  zabbix-agent
+
+2.login in  http://10.10.10.108/zabbix/ by guest account
+find some stuff about zapper
+
+3.try zapper/zapper - GUI access disabled
+
+4.install zabbix-cli
+zabbix-cli-init -z http://10.10.10.108/zabbix/api_jsonrpc.php
+zabbix-cli
+
+
