@@ -30,4 +30,5 @@
 | machine | operation | user | root | active |
 |---------|-----------|------|------|--------|
 | zipper  | linux     |      |      | √      |
+| teacher | linux     |      |      | √      | 
 | carrier | linux     | √    |      | √      |

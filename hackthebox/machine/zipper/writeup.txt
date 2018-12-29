@@ -15,4 +15,7 @@ find some stuff about zapper
 zabbix-cli-init -z http://10.10.10.108/zabbix/api_jsonrpc.php
 zabbix-cli
 
+5.download rce.py modi the hostid and account
+
+6.modi exp, run the script on agent, got the reverse shell
 
