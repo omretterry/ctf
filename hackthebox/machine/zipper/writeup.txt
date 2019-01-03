@@ -17,5 +17,10 @@ zabbix-cli
 
 5.download rce.py modi the hostid and account
 
-6.modi exp, run the script on agent, got the reverse shell
+6.modi exp, run the script on agent, got the shell
+
+7./home/zapper/utils/backup.sh found the passwd `ZippityDoDah`
+
+8.try to switch to user zapper. return :
+su: must be run from a terminal
 

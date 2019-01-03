@@ -1,0 +1,17 @@
+1.port enum -> 10.10.10.153 
+only got the 80 port
+
+2.dirb the web site 
+---- Scanning URL: http://10.10.10.153/ ----
+==> DIRECTORY: http://10.10.10.153/css/                                                   
+==> DIRECTORY: http://10.10.10.153/fonts/                                                 
+==> DIRECTORY: http://10.10.10.153/images/                                                
++ http://10.10.10.153/index.html (CODE:200|SIZE:8028)                                     
+==> DIRECTORY: http://10.10.10.153/javascript/                                            
+==> DIRECTORY: http://10.10.10.153/js/                                                    
+==> DIRECTORY: http://10.10.10.153/manual/                                                
+==> DIRECTORY: http://10.10.10.153/moodle/                                                
++ http://10.10.10.153/phpmyadmin (CODE:403|SIZE:297)                                      
++ http://10.10.10.153/server-status (CODE:403|SIZE:300) 
+
+3.got the teacher admin page
