@@ -25,10 +25,10 @@
 | jerry   | windows   | √    | √    | ×      |
 | active  | windows   | √    | √    | ×      |
 | waldo   | linux     | √    | √    | ×      |
+| zipper  | linux     | √    | √    | √      |
 
 ### Target
 | machine | operation | user | root | active |
 |---------|-----------|------|------|--------|
-| zipper  | linux     | √    |      | √      |
 | teacher | linux     |      |      | √      | 
 | carrier | linux     | √    |      | √      |
