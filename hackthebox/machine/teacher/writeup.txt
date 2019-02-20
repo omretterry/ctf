@@ -15,3 +15,43 @@ only got the 80 port
 + http://10.10.10.153/server-status (CODE:403|SIZE:300) 
 
 3.got the teacher admin page
+
+================
+collection
+================
+
+login by guest:   Teacher: Giovanni Chhatta  
+Course: Algebra
+
+find error image
+
+4.download the error image and strings to get the message
+
+>>>
+root@kali:~/ctf/hackthebox/machine/teacher# wget http://10.10.10.153/images/5.png
+--2019-01-14 21:34:45--  http://10.10.10.153/images/5.png
+Connecting to 10.10.10.153:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 200 [image/png]
+Saving to: ‘5.png’
+
+5.png               100%[===================>]     200  --.-KB/s    in 0s      
+
+2019-01-14 21:34:46 (22.8 MB/s) - ‘5.png’ saved [200/200]
+
+root@kali:~/ctf/hackthebox/machine/teacher# ls
+5.png  writeup.txt
+root@kali:~/ctf/hackthebox/machine/teacher# file 5.png 
+5.png: ASCII text
+root@kali:~/ctf/hackthebox/machine/teacher# strings 5.png 
+Hi Servicedesk,
+I forgot the last charachter of my password. The only part I remembered is Th4C00lTheacha.
+Could you guys figure out what the last charachter is, or just reset it?
+Thanks,
+Giovanni
+>>>
+
+6.gen wordlist by crunch and find passwd: Th4C00lTheacha#
+login as:   Giovanni/Th4C00lTheacha#
+
+
